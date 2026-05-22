@@ -1,0 +1,56 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--bg-light) 0%, #FFF9C4 100%);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.gallery {
+  /* Masonry-раскладка (как в Pinterest) */
+  column-count: 3; /* Количество колонок */
+  column-gap: 2rem; /* Отступ между колонками */
+  margin-bottom: 3rem;
+}
+
+/* Адаптивность: на планшетах 2 колонки */
+@media (max-width: 1024px) {
+  .gallery { column-count: 2; }
+}
+
+/* Адаптивность: на телефонах 1 колонка */
+@media (max-width: 768px) {
+  .gallery { column-count: 1; }
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-secondary);
+  border-top: 1px solid #FFE082;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .header h1 { font-size: 2rem; }
+  .gallery { grid-template-columns: 1fr; }
+  .artwork-img { height: 220px; }
+}

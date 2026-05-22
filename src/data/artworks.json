@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Ink Sans hype meme",
+    "description": "frutiger metro idk :-P",
+    "image": "/images/art1.png",
+    "year": 2026
+  },
+  {
+    "id": 2,
+    "title": "my OC ref",
+    "description": "for art event!",
+    "image": "/images/art2.png",
+    "year": 2026
+  },
+  {
+    "id": 3,
+    "title": "NEUDACHA N VOX CANON",
+    "description": "funny gift for my friend XD",
+    "image": "/images/art3.png",
+    "year": 2026
+  },
+    {
+    "id": 4,
+    "title": "fanart for event",
+    "description": "so gay XD",
+    "image": "/images/art4.png",
+    "year": 2026
+  },
+  {
+    "id": 5,
+    "title": "my old mascot design",
+    "description": "that really sucks :_)",
+    "image": "/images/art5.png",
+    "year": 2026
+  },
+  {
+    "id": 6,
+    "title": "coming soon",
+    "description": "real(im not joking(maybe(im not sure)))",
+    "image": "/images/art6.jpg"
+  }
+]

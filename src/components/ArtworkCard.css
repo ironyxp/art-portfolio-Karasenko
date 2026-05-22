@@ -1,0 +1,106 @@
+.artwork-card {
+  background: var(--bg-card);
+  /* Убрали overflow: hidden, чтобы тени не обрезались, если будем вращать */
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  
+  /* Важно для Masonry: запрещаем разрывать карточку между колонками */
+  break-inside: avoid; 
+  margin-bottom: 2rem; /* Отступ снизу */
+  
+  /* Небольшое скругление, но не идеальное */
+  border-radius: 12px;
+}
+
+.artwork-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* При наведении карточка "всплывает" над другими */
+}
+
+.artwork-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* Скругляем углы картинки под карточку */
+  border-radius: 12px; 
+}
+
+.artwork-img {
+  width: 100%;
+  height: auto; /* Ключевое: высота авто, картинка не обрезается */
+  display: block;
+  background-color: #F5F5F5;
+}
+
+/* --- Эффект "Неровных окошек" --- */
+/* Делаем углы немного разными у каждой карточки для органичности */
+
+.artwork-card:nth-child(odd) {
+  border-radius: 15px 5px 15px 5px;
+}
+
+.artwork-card:nth-child(even) {
+  border-radius: 5px 15px 5px 15px;
+}
+
+.artwork-card:nth-child(3n) {
+  border-radius: 20px 20px 5px 5px;
+}
+
+/* Остальной код (overlay, info, year) оставляем как был */
+
+.artwork-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit; /* Наследуем скругление */
+}
+
+.artwork-card:hover .artwork-overlay {
+  opacity: 1;
+}
+
+.view-text {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: #dc5939;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.artwork-info {
+  padding: 1.5rem;
+}
+
+.artwork-info h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.artwork-info p {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.year {
+  display: inline-block;
+  background: #dc5939; 
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}

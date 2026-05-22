@@ -1,0 +1,121 @@
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 1001;
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+  color: #dc5939;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-info {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.lightbox-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #dc5939;
+}
+
+.lightbox-info p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #e0e0e0;
+}
+
+.lightbox-year {
+  display: inline-block;
+  background: #dc5939;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-close {
+    top: -45px;
+    font-size: 2.5rem;
+  }
+  
+  .lightbox-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .lightbox-info p {
+    font-size: 1rem;
+  }
+  
+  .lightbox-image {
+    max-height: 70vh;
+  }
+}
